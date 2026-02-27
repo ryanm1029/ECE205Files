@@ -18,7 +18,7 @@ int main() {
     while (1) {
         cout << "Start time in 24-hour format = ";
         cin >> tempTime;
-        if (tempTime % 100 < 60 && ((tempTime - (tempTime % 100)) / 100) < 24) {
+        if (tempTime % 100 < 60 && ((tempTime - (tempTime % 100)) / 100) < 24 && tempTime != 2359) {
             startTime = tempTime;
             break;
         } else {
@@ -31,7 +31,7 @@ int main() {
     while (1) {
         cout << "End time in 24-hour format = ";
         cin >> tempTime;
-        if (tempTime % 100 < 60 && ((tempTime - (tempTime % 100)) / 100) < 24) {
+        if (tempTime % 100 < 60 && ((tempTime - (tempTime % 100)) / 100) < 24 && tempTime > startTime) {
             endTime = tempTime;
             break;
         } else {
