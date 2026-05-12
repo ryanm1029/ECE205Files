@@ -3,10 +3,12 @@
 
 using namespace std;
 
+//prototypes
 void handleInput(vector<char>& myVector);
 void deleteRepeatedChars(vector<char>& myVector);
 void selectionSort(vector<char>& myVector);
 
+//main
 int main() {
     vector<char> chars;
     
@@ -16,13 +18,15 @@ int main() {
 
     selectionSort(chars);
 
+    //print chars to console
     for (int i = 0; i < chars.size(); i++){
         cout << "Character " << i + 1 << ": " << chars[i] << endl;
     }
-    
+
     return 0;
 }
 
+//definitions
 void handleInput(vector<char>& myVector) {
     cout << "Enter characters. To stop entry, input 0:" << endl;
     char temp;
